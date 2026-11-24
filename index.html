@@ -18,18 +18,14 @@ html{-webkit-text-size-adjust:100%}
 body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.5}
 h1,h2,h3{font-family:'Space Grotesk',Inter,sans-serif;margin:0;line-height:1.2}
 p{margin:0}
-button{font:inherit;cursor:pointer}
+button,select{font:inherit;cursor:pointer}
 [hidden]{display:none!important}
 .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
-
-/* header */
 header.top{background:var(--navy);color:#fff}
 .top-in{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 0}
 .logo{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk';font-weight:700;font-size:22px;letter-spacing:.6px}
 .tagline{color:#9FB7C9;font-size:13px}
 .demo-pill{margin-left:auto;background:var(--navy2);color:var(--yellow);border-radius:99px;padding:4px 12px;font-size:12px;font-weight:600;white-space:nowrap}
-
-/* stepper */
 .stepper{display:flex;gap:6px;list-style:none;margin:18px 0 0;padding:0;overflow-x:auto}
 .stepper li{flex:1 1 0;min-width:96px}
 .stepper button{width:100%;display:flex;align-items:center;gap:8px;background:transparent;border:0;border-top:3px solid var(--line);padding:8px 2px 4px;color:var(--muted);font-size:13px;font-weight:600;text-align:left}
@@ -39,12 +35,11 @@ header.top{background:var(--navy);color:#fff}
 .stepper li.cur button{border-top-color:var(--orange);color:var(--navy)}
 .stepper li.cur .n{background:var(--orange);color:#fff}
 .stepper button:disabled{cursor:not-allowed;opacity:.55}
-
 main{padding:20px 0 48px}
 .head{margin-bottom:18px}
 .head h1{font-size:28px}
-.head p{color:var(--muted);margin-top:6px;max-width:720px}
-.grid2{display:grid;grid-template-columns:1.25fr 1fr;gap:18px;align-items:start}
+.head p{color:var(--muted);margin-top:6px;max-width:760px}
+.grid2{display:grid;grid-template-columns:1.3fr 1fr;gap:18px;align-items:start}
 .cards{display:grid;gap:12px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px}
 .card.dark{background:var(--navy);border-color:var(--navy);color:#fff}
@@ -53,7 +48,7 @@ main{padding:20px 0 48px}
 .small{font-size:13px}
 .row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .between{justify-content:space-between}
-.badge{display:inline-flex;align-items:center;gap:6px;border-radius:99px;padding:3px 10px;font-size:12px;font-weight:600}
+.badge{display:inline-flex;align-items:center;gap:6px;border-radius:99px;padding:3px 10px;font-size:12px;font-weight:600;white-space:nowrap}
 .b-teal{background:var(--teal-l);color:var(--teal)}
 .b-green{background:var(--green-l);color:var(--green)}
 .b-orange{background:var(--orange-l);color:#A8430A}
@@ -62,48 +57,30 @@ main{padding:20px 0 48px}
 .btn:hover{filter:brightness(1.06)}
 .btn.sec{background:var(--teal-l);color:var(--teal)}
 .btn.ghost{background:transparent;color:var(--teal);border:1.5px solid var(--teal)}
+.btn.sm{padding:7px 14px;font-size:14px}
 .btn:disabled{opacity:.45;cursor:not-allowed;filter:none}
-.bar{height:8px;background:var(--line);border-radius:99px;overflow:hidden}
-.bar i{display:block;height:100%;background:var(--teal);border-radius:99px}
-.kpi{font-family:'Space Grotesk';font-size:26px;font-weight:700}
 .note{border-radius:12px;padding:12px 14px;font-size:14px}
-.note.teal{background:var(--teal-l)}
-.note.yellow{background:var(--yellow-l)}
-.note.green{background:var(--green-l)}
-.note.red{background:var(--red-l)}
-
-/* regattas */
-.reg h3{font-size:19px}
-.reg .meta{display:flex;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:14px;margin:4px 0 12px}
-
-/* families */
-.fam{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center}
-.avatar{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-family:'Space Grotesk';font-weight:700;color:#fff;background:var(--teal)}
-.fam h3{font-size:17px}
-.fam .meta{color:var(--muted);font-size:14px}
-.fam.sel{outline:2.5px solid var(--orange)}
-
-/* form */
-label.f{display:block;font-weight:600;font-size:14px;margin:0 0 6px}
-input[type=text]{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;font:inherit;color:var(--text);background:#fff}
-input[type=text]:focus,input[type=range]:focus-visible,button:focus-visible,[role=button]:focus-visible{outline:2.5px solid var(--orange);outline-offset:2px}
+.note.teal{background:var(--teal-l)}.note.yellow{background:var(--yellow-l)}.note.green{background:var(--green-l)}.note.red{background:var(--red-l)}
+.kpi{font-family:'Space Grotesk';font-size:26px;font-weight:700}
+label.f,.f{display:block;font-weight:600;font-size:14px;margin:0 0 6px}
+input[type=text],select{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;font:inherit;color:var(--text);background:#fff}
 input[type=range]{width:100%;accent-color:var(--orange)}
-.check{display:flex;gap:10px;align-items:center;font-size:14px}
-.check input{width:18px;height:18px;accent-color:var(--orange)}
+:focus-visible{outline:2.5px solid var(--orange);outline-offset:2px}
 .field{margin-bottom:16px}
-.photo{display:flex;gap:12px;align-items:center}
-.photo img{width:72px;height:72px;object-fit:cover;border-radius:10px;border:1px solid var(--line)}
 .file-btn{position:relative;overflow:hidden}
 .file-btn input{position:absolute;inset:0;opacity:0;cursor:pointer}
 
-/* AI output */
-.ai{min-height:320px}
-.ai h3{font-size:16px;margin:16px 0 8px;display:flex;align-items:center;gap:8px}
-.ai h3:first-of-type{margin-top:0}
-.ai ul{margin:0;padding-left:20px}
-.ai li{margin:4px 0}
-.ai .kid{background:var(--yellow-l);border-radius:12px;padding:12px 14px;font-size:15px}
-.ai .kid ol{margin:8px 0 0;padding-left:20px}
+/* objects */
+.obj{display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:center}
+.ico{width:52px;height:52px;border-radius:12px;display:grid;place-items:center;background:var(--teal-l);color:var(--teal);overflow:hidden}
+.ico img{width:100%;height:100%;object-fit:cover}
+.obj h3{font-size:16px}
+.obj .acts{display:flex;gap:6px;align-items:center}
+.x{border:0;background:transparent;color:var(--muted);font-size:20px;line-height:1;padding:6px 8px;border-radius:8px}
+.x:hover{background:var(--bg)}
+.add{display:grid;grid-template-columns:1fr auto;gap:8px}
+
+/* AI */
 .typing{display:flex;align-items:center;gap:10px;color:var(--muted);font-weight:600}
 .dots span{display:inline-block;width:7px;height:7px;margin:0 2px;border-radius:50%;background:var(--teal);animation:b 1s infinite}
 .dots span:nth-child(2){animation-delay:.15s}.dots span:nth-child(3){animation-delay:.3s}
@@ -111,41 +88,53 @@ input[type=range]{width:100%;accent-color:var(--orange)}
 .reveal{animation:r .35s ease both}
 @keyframes r{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.reveal,.dots span{animation:none}}
+.plan h3{font-size:15px;margin:0 0 6px;display:flex;gap:8px;align-items:center}
+.plan ul{margin:0 0 14px;padding-left:20px}
+.plan li{margin:3px 0}
+.kid{background:var(--yellow-l);border-radius:12px;padding:12px 14px}
+.kid ol{margin:8px 0 0;padding-left:20px}
+.eq{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line)}
+.eq:last-child{border-bottom:0}
+.eq label{display:flex;gap:8px;align-items:center;font-size:14px;cursor:pointer}
+.eq input{width:18px;height:18px;accent-color:var(--teal)}
+
+/* listings */
+.lst{display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:start}
+.av{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-family:'Space Grotesk';font-weight:700;color:#fff;background:var(--teal)}
+.lst h3{font-size:16px}
+.price{font-family:'Space Grotesk';font-size:20px;font-weight:700;text-align:right}
+.lst.sel{outline:2.5px solid var(--orange)}
+.ai-txt{font-style:italic;color:var(--text);background:var(--bg);border-radius:10px;padding:8px 10px;margin-top:6px;font-size:14px}
+.group{margin-bottom:18px}
+.group>h2{font-size:17px;margin:0 0 8px;display:flex;align-items:center;gap:8px}
 
 /* inspection */
 .tabs{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
 .tab{border:1.5px solid var(--line);background:#fff;border-radius:99px;padding:7px 14px;font-weight:600;font-size:14px;color:var(--muted)}
 .tab.on{border-color:var(--teal);background:var(--teal);color:#fff}
 .tab:disabled{opacity:.45;cursor:not-allowed}
-.insp{display:grid;grid-template-columns:220px 1fr;gap:18px;align-items:start}
-svg.boat{width:100%;max-width:220px;height:auto;display:block;margin:0 auto}
-svg.boat [role=button]{cursor:pointer}
-.zones{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
-.zone{display:flex;justify-content:space-between;align-items:center;gap:8px;border:1.5px solid var(--line);border-radius:10px;padding:9px 12px;background:#fff;font-weight:600;font-size:14px;text-align:left;color:var(--text)}
-.zone .st{font-size:12px;font-weight:700;border-radius:99px;padding:2px 8px;background:#E3EAF0;color:var(--muted);white-space:nowrap}
-.zone.ok .st{background:var(--green-l);color:var(--green)}
-.zone.rayure .st{background:var(--yellow-l);color:#8A5A00}
-.zone.choc .st{background:var(--red-l);color:var(--red)}
-.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin:10px 0}
-.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px;vertical-align:-1px}
-
-/* recap */
+.ins{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px dashed var(--line)}
+.ins:last-child{border-bottom:0}
+.seg{display:inline-flex;border:1.5px solid var(--line);border-radius:99px;overflow:hidden}
+.seg button{border:0;background:#fff;padding:6px 12px;font-size:13px;font-weight:600;color:var(--muted)}
+.seg button+button{border-left:1.5px solid var(--line)}
+.seg button.on.ok{background:var(--green-l);color:var(--green)}
+.seg button.on.rayure{background:var(--yellow-l);color:#8A5A00}
+.seg button.on.choc{background:var(--red-l);color:var(--red)}
+.seg button:disabled{cursor:not-allowed}
 .lines{display:grid;gap:10px}
 .line{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding-bottom:10px}
 .line:last-child{border-bottom:0;padding-bottom:0}
 .total{font-family:'Space Grotesk';font-size:22px;font-weight:700}
-.ok-ico{color:var(--green);font-weight:700}
-
 footer{color:var(--muted);font-size:12px;text-align:center;padding:0 16px 28px}
-
 @media (max-width:820px){
-  .grid2,.insp{grid-template-columns:1fr}
+  .grid2{grid-template-columns:1fr}
   .head h1{font-size:24px}
-  .fam{grid-template-columns:auto 1fr}
-  .fam .act{grid-column:1/-1}
-  .fam .act .btn{width:100%}
   .stepper .lbl{display:none}
   .stepper li{min-width:44px}
+  .lst{grid-template-columns:44px 1fr}
+  .lst .side{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center}
+  .ins{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -157,317 +146,295 @@ footer{color:var(--muted);font-size:12px;text-align:center;padding:0 16px 28px}
         <svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#123A5C" stroke="#FFC145" stroke-width="3"/><rect x="15" y="8" width="2" height="17" fill="#D7E3EC"/><path d="M17.5 9 L29 8 L27.5 22 L17.5 23 Z" fill="#FFC145"/><path d="M9 25 H31 L28 31 H12 Z" fill="#fff"/></svg>
         AMARRE
       </div>
-      <span class="tagline">Le bateau de ton enfant voyage protégé.</span>
+      <span class="tagline">Déménager entre particuliers, en protégeant ce qui compte.</span>
       <span class="demo-pill">Démo · données fictives</span>
     </div>
   </div>
 </header>
-
 <div class="wrap">
   <ol class="stepper" id="stepper" aria-label="Étapes"></ol>
   <main id="main"></main>
 </div>
-<footer>Prototype AMARRE · équipe CodeBreakers · Familles, clubs et trajets fictifs. L’IA est simulée dans cette démo ; aucun paiement réel.</footer>
+<footer>Prototype AMARRE · équipe CodeBreakers · Particuliers, annonces et prix fictifs. L’IA est simulée dans cette démo ; aucun paiement réel.</footer>
 
 <script>
 (function () {
   'use strict';
 
   /* ---------- données fictives ---------- */
-  const CLUB = 'Club de voile de Brest';
-  const REGATTAS = [
-    { id: 'lr', name: 'Régate de ligue', place: 'La Rochelle', date: 'samedi 14 mars', km: 400, boats: 14, found: 11 },
-    { id: 'lo', name: 'Coupe d’hiver', place: 'Lorient', date: 'dimanche 22 mars', km: 135, boats: 9, found: 9 },
-    { id: 'qb', name: 'Stage de printemps', place: 'Quiberon', date: 'du 6 au 10 avril', km: 180, boats: 12, found: 7 }
-  ];
-  const FAMILIES = {
-    lr: [
-      { id: 'martin', name: 'Famille Martin', ini: 'M', color: '#0E7490', transport: 'remorque', label: 'Remorque pour 3 Optimist', free: 1, depart: 'samedi, 6 h 30, parking du club', trips: 12 },
-      { id: 'legall', name: 'Famille Le Gall', ini: 'LG', color: '#E85D04', transport: 'barres', label: 'Barres de toit', free: 1, depart: 'vendredi, 18 h, parking du club', trips: 4 },
-      { id: 'diallo', name: 'Famille Diallo', ini: 'D', color: '#1E9E62', transport: 'remorque', label: 'Remorque pour 4 Optimist', free: 3, depart: 'samedi, 5 h 45, parking du club', trips: 0 }
-    ],
-    lo: [
-      { id: 'kerjean', name: 'Famille Kerjean', ini: 'K', color: '#0E7490', transport: 'remorque', label: 'Remorque pour 3 Optimist', free: 2, depart: 'dimanche, 7 h, parking du club', trips: 7 },
-      { id: 'moreau', name: 'Famille Moreau', ini: 'Mo', color: '#E85D04', transport: 'barres', label: 'Barres de toit', free: 1, depart: 'samedi, 17 h, parking du club', trips: 2 }
-    ],
-    qb: [
-      { id: 'benali', name: 'Famille Benali', ini: 'B', color: '#1E9E62', transport: 'remorque', label: 'Remorque pour 4 Optimist', free: 2, depart: 'lundi 6 avril, 8 h, parking du club', trips: 9 }
-    ]
+  const MOVE = { from: 'Brest', to: 'Annecy', date: 'samedi 4 juillet', km: 1000 };
+  const PACK = 19, COMMISSION = 0.10, RESALE = 0.8;
+  const EQ = {
+    remorque: 'Remorque à bateau', sangles: 'Sangles à cliquet', mousses: 'Mousses de protection', housse_voile: 'Housse de voile',
+    couvertures: 'Couvertures de déménagement', film: 'Film étirable', cartons: 'Cartons renforcés', bulle: 'Papier bulle',
+    housse_velo: 'Housse de vélo', housse_tv: 'Housse matelassée de télévision', housse_matelas: 'Housse de matelas',
+    diable: 'Diable de manutention', housse_planche: 'Housse de planche'
   };
-  const ZONES = [
-    { id: 'avant', label: 'Coque avant' }, { id: 'arriere', label: 'Coque arrière' }, { id: 'mat', label: 'Mât' },
-    { id: 'derive', label: 'Dérive' }, { id: 'safran', label: 'Safran' }, { id: 'espars', label: 'Bôme et livarde' }, { id: 'voile', label: 'Voile' }
-  ];
-  const ST_LABEL = { ok: 'OK', rayure: 'Rayure', choc: 'Choc' };
-  const ST_NEXT = { undefined: 'ok', ok: 'rayure', rayure: 'choc', choc: 'ok' };
-  const ST_RANK = { ok: 0, rayure: 1, choc: 2 };
-  const ST_FILL = { none: '#E3EAF0', ok: '#BFEBD3', rayure: '#FFE7A8', choc: '#F7B8B8' };
-  const FEE = 8, PER_KM = 0.05;
-  const STEPS = ['Régate', 'Place', 'Protection IA', 'État des lieux', 'Récapitulatif'];
+  const CATS = {
+    bateau: { label: 'Bateau (Optimist)', eq: { remorque: 1, sangles: 2, mousses: 4, housse_voile: 1 },
+      plan: ['Mât, bôme et livarde dans la mousse, attachés le long de la remorque.', 'Coque centrée sur la remorque, deux sangles croisées, serrées sans excès.', 'Safran et dérive dans leurs housses, rangés dans la voiture.', 'Voile roulée, jamais pliée, dans sa housse.'] },
+    canape: { label: 'Canapé', eq: { couvertures: 2, film: 1, sangles: 2 },
+      plan: ['Coussins retirés et emballés à part.', 'Canapé enveloppé dans 2 couvertures, puis dans le film étirable.', 'Calé debout contre la paroi du camion, avec 2 sangles.'] },
+    velo: { label: 'Vélo', eq: { housse_velo: 1, mousses: 2 },
+      plan: ['Pédales et guidon tournés vers l’intérieur.', 'Mousses sur le cadre, vélo dans sa housse.', 'Chargé en dernier, contre un meuble lourd.'] },
+    vaisselle: { label: 'Vaisselle', eq: { cartons: 6, bulle: 1 },
+      plan: ['Assiettes rangées sur la tranche, jamais à plat.', 'Chaque verre dans le papier bulle.', 'Cartons marqués « fragile », chargés en haut.'] },
+    tv: { label: 'Télévision', eq: { housse_tv: 1, couvertures: 1 },
+      plan: ['Écran dans sa housse matelassée, jamais posé à plat.', 'Transportée debout, calée dans une couverture.'] },
+    lit: { label: 'Lit et matelas', eq: { housse_matelas: 1, sangles: 2 },
+      plan: ['Lit démonté, vis dans un sachet scotché au montant.', 'Matelas dans sa housse, debout contre la paroi.'] },
+    armoire: { label: 'Armoire', eq: { couvertures: 3, sangles: 2, diable: 1 },
+      plan: ['Armoire vidée, portes maintenues fermées par le film.', 'Déplacée au diable, protégée par 3 couvertures.', 'Sanglée contre la paroi du camion.'] },
+    planche: { label: 'Planche à voile', eq: { housse_planche: 1, mousses: 2, sangles: 2 },
+      plan: ['Aileron démonté, planche dans sa housse.', 'Mousses aux points d’appui, 2 sangles.'] }
+  };
+  const ICONS = {
+    bateau: '<path d="M6 30h28l-4 6H10z" fill="currentColor"/><path d="M19 6v22" stroke="currentColor" stroke-width="2"/><path d="M21 7l10-1-2 15-8 1z" fill="currentColor" opacity=".6"/>',
+    canape: '<rect x="5" y="16" width="30" height="12" rx="3" fill="currentColor"/><rect x="9" y="11" width="22" height="8" rx="2" fill="currentColor" opacity=".6"/><path d="M8 28v4M32 28v4" stroke="currentColor" stroke-width="2"/>',
+    velo: '<circle cx="11" cy="26" r="6" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="29" cy="26" r="6" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M11 26l7-10h8l3 10M18 16l-3-4h-3" fill="none" stroke="currentColor" stroke-width="2.5"/>',
+    vaisselle: '<ellipse cx="20" cy="24" rx="14" ry="5" fill="currentColor" opacity=".6"/><ellipse cx="20" cy="20" rx="14" ry="5" fill="currentColor"/>',
+    tv: '<rect x="5" y="9" width="30" height="19" rx="2" fill="currentColor"/><path d="M14 33h12M20 28v5" stroke="currentColor" stroke-width="2.5"/>',
+    lit: '<rect x="5" y="18" width="30" height="9" rx="2" fill="currentColor"/><rect x="7" y="13" width="9" height="6" rx="2" fill="currentColor" opacity=".6"/><path d="M6 27v5M34 27v5" stroke="currentColor" stroke-width="2.5"/>',
+    armoire: '<rect x="9" y="5" width="22" height="30" rx="2" fill="currentColor"/><path d="M20 7v26" stroke="#fff" stroke-width="1.5"/><circle cx="17" cy="20" r="1.3" fill="#fff"/><circle cx="23" cy="20" r="1.3" fill="#fff"/>',
+    planche: '<path d="M8 32C14 20 24 10 33 7c-2 9-11 19-23 26z" fill="currentColor"/>'
+  };
+  const LISTINGS = {
+    remorque: [
+      { who: 'Marc', ini: 'M', km: 4, price: 180, txt: 'Remorque pour Optimist, roues et éclairage en bon état. Mon fils est passé au Laser : elle ne sert plus.' },
+      { who: 'Sandrine', ini: 'S', km: 8, price: 220, txt: 'Remorque légère pour dériveur, révisée ce printemps, avec support de mât.' }
+    ],
+    sangles: [{ who: 'Inès', ini: 'I', km: 2, price: 15, txt: 'Lot de 6 sangles à cliquet, utilisées une seule fois pour un déménagement.' }],
+    mousses: [{ who: 'Club de voile de Brest', ini: 'CV', km: 2, price: 0, txt: 'Mousses de protection données par le club aux familles de navigateurs qui déménagent.', club: true }],
+    housse_voile: [{ who: 'Hugo', ini: 'H', km: 6, price: 10, txt: 'Housse de voile d’Optimist, fermeture éclair neuve.' }],
+    couvertures: [{ who: 'Paul', ini: 'P', km: 6, price: 20, txt: 'Lot de 10 couvertures de déménagement épaisses, propres.' }],
+    film: [{ who: 'Lucie', ini: 'L', km: 3, price: 5, txt: 'Rouleau de film étirable entamé, il en reste les trois quarts.' }],
+    cartons: [{ who: 'Sophie', ini: 'S', km: 1, price: 0, txt: '30 cartons renforcés, déjà servis pour notre propre déménagement : je les donne.' }],
+    bulle: [{ who: 'Sophie', ini: 'S', km: 1, price: 3, txt: 'Rouleau de papier bulle, presque plein.' }],
+    housse_velo: [{ who: 'Karim', ini: 'K', km: 7, price: 8, txt: 'Housse de vélo rembourrée, taille enfant et adulte.' }],
+    housse_tv: [{ who: 'Nadia', ini: 'N', km: 3, price: 12, txt: 'Housse matelassée pour écran jusqu’à 65 pouces.' }],
+    housse_matelas: [{ who: 'Nadia', ini: 'N', km: 3, price: 6, txt: 'Housse de matelas 140 × 190, plastique épais.' }],
+    diable: [{ who: 'Thomas', ini: 'T', km: 9, price: 25, txt: 'Diable de manutention, roues gonflables, charge 200 kg.' }],
+    housse_planche: [{ who: 'Hugo', ini: 'H', km: 6, price: 12, txt: 'Housse de planche à voile, rembourrée.' }]
+  };
+  const COLORS = ['#0E7490', '#E85D04', '#1E9E62', '#7A4FB3', '#B7791F'];
+  const STEPS = ['Mes objets', 'L’IA prépare', 'S’équiper', 'État des lieux', 'Récap et revente'];
+  const ST = { ok: 'OK', rayure: 'Rayure', choc: 'Choc' }, RANK = { ok: 0, rayure: 1, choc: 2 };
 
   /* ---------- état ---------- */
-  const KEY = 'amarre-demo';
-  const fresh = () => ({ step: 1, regatta: null, family: null, child: 'Léo', age: 10, wind: false, plan: false, before: {}, after: {}, beforeAt: null, afterAt: null, phase: 'before', confirmed: false });
+  const KEY = 'amarre-demo-v2';
+  const DEFAULT_OBJECTS = [
+    { id: 'o1', name: 'Optimist de Léo', cat: 'bateau', kid: true }, { id: 'o2', name: 'Canapé 3 places', cat: 'canape' },
+    { id: 'o3', name: 'Vélo de Léo', cat: 'velo', kid: true }, { id: 'o4', name: 'Vaisselle', cat: 'vaisselle' }, { id: 'o5', name: 'Télévision', cat: 'tv' }
+  ];
+  const fresh = () => ({ step: 1, objects: DEFAULT_OBJECTS.map(o => Object.assign({}, o)), seq: 6, analyzed: false, have: {}, picks: {}, equipDone: false, child: 'Léo', age: 12, before: {}, after: {}, beforeAt: null, afterAt: null, phase: 'before', resale: false, confirmed: false });
   let S = fresh();
   try { const raw = localStorage.getItem(KEY); if (raw) S = Object.assign(fresh(), JSON.parse(raw)); } catch (e) { /* stockage indisponible */ }
-  const photos = { plan: null, before: null, after: null };
+  const photos = {};
   let animating = false;
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { /* ignore */ } };
-
-  const $ = (sel, el) => (el || document).querySelector(sel);
+  const $ = s => document.querySelector(s);
   const esc = t => String(t).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const reg = () => REGATTAS.find(r => r.id === S.regatta);
-  const fam = () => (FAMILIES[S.regatta] || []).find(f => f.id === S.family);
-  const share = r => Math.round(r.km * PER_KM);
-  const childName = () => (S.child || '').trim() || 'ton enfant';
-  const famLow = f => f.name.replace(/^Famille/, 'famille');
-  const lowFirst = t => t.charAt(0).toLowerCase() + t.slice(1);
+  const eur = n => (Math.round(n * 100) / 100).toLocaleString('fr-FR', { minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 }) + ' €';
   const hm = ts => { const d = new Date(ts); return d.getHours() + ' h ' + String(d.getMinutes()).padStart(2, '0'); };
-  const maxStep = () => !S.regatta ? 1 : !S.family ? 2 : !S.plan ? 3 : !(S.beforeAt && S.afterAt) ? 4 : 5;
+  const arr = () => (new Date(S.afterAt).toDateString() === new Date(S.beforeAt).toDateString() ? 'à ' : 'le lendemain à ') + hm(S.afterAt);
+  const kidName = () => (S.child || '').trim() || 'ton enfant';
+  const icon = (cat, size) => '<svg width="' + (size || 30) + '" height="' + (size || 30) + '" viewBox="0 0 40 40" aria-hidden="true">' + (ICONS[cat] || '') + '</svg>';
 
-  /* ---------- « IA » : rédaction du plan (simulée pour la démo) ---------- */
-  function generatePlan() {
-    const r = reg(), f = fam(), n = childName(), young = S.age <= 11;
-    const load = f.transport === 'remorque' ? [
-      'Coque posée sur les supports de la remorque, bien centrée, avec une mousse à chaque point d’appui.',
-      'Deux sangles croisées sur la coque, serrées sans excès : la coque d’un Optimist peut se déformer.',
-      'Mât, bôme et livarde dans leur housse, entourés de mousse, attachés le long de la remorque en trois points.',
-      'Safran et dérive dans leurs housses matelassées, rangés dans la voiture de la ' + famLow(f) + ', pas sur la remorque.',
-      'Voile roulée, jamais pliée, dans son sac.'
-    ] : [
-      'Coque retournée sur les barres de toit, une mousse sur chaque barre.',
-      'Deux sangles plates par-dessus la coque, autour des barres, bien serrées.',
-      'Une corde de sécurité à l’avant et une à l’arrière, attachées aux points d’accroche de la voiture.',
-      'Mât, bôme et livarde dans leur housse, dans la voiture si la place le permet.',
-      'Safran, dérive et voile roulée dans le coffre, chacun dans sa housse.'
-    ];
-    load.push(r.km > 250 ? 'Trajet de ' + r.km + ' km : une pause toutes les 2 heures pour vérifier les sangles.' : 'Trajet de ' + r.km + ' km : vérifier les sangles au départ et à l’arrivée.');
-    if (S.wind) load.push('Vent fort annoncé sur la route : ajouter une troisième sangle à l’arrière de la coque.');
-    const kid = young ? {
-      intro: 'Capitaine ' + n + ' ! Ton Optimist part en voyage avec la ' + famLow(f) + ' jusqu’à ' + r.place + '. Avant le départ, ta mission en 3 étapes :',
-      steps: ['Range ton safran et ta dérive dans leurs housses, comme des trésors.', 'Roule ta voile bien serrée, sans la plier.', 'Fais un nœud de cabestan pour attacher ta bosse à la remorque : un adulte vérifiera !'],
-      end: 'Bravo, ton bateau est protégé. Rendez-vous à ' + r.place + ' !'
-    } : {
-      intro: n + ', tu es responsable de ton bateau pour ce trajet de ' + r.km + ' km. Ta check-list :',
-      steps: ['Safran et dérive : housses fermées, rangés dans la voiture.', 'Voile roulée avec ses lattes, sac fermé.', 'Bosse d’avant : nœud de cabestan sur la remorque, puis deux demi-clés.', 'Une photo de chaque face de la coque pour l’état des lieux.'],
-      end: 'Ton bateau est entre de bonnes mains : les tiennes.'
-    };
-    const watch = ['Photographier la coque dessus et dessous, le pied de mât, le safran et la dérive.', 'Noter les rayures déjà présentes : elles ne seront pas comptées à l’arrivée.'];
-    return { load, kid, watch };
+  function needs() {
+    const n = {};
+    S.objects.forEach(o => Object.entries(CATS[o.cat].eq).forEach(([k, q]) => { n[k] = (n[k] || 0) + q; }));
+    return n;
   }
-  function planHTML(p) {
-    return '<h3>Plan de chargement</h3><ul>' + p.load.map(t => '<li>' + esc(t) + '</li>').join('') + '</ul>' +
-      '<h3>Mission de ' + esc(childName()) + '</h3><div class="kid"><p>' + esc(p.kid.intro) + '</p><ol>' + p.kid.steps.map(t => '<li>' + esc(t) + '</li>').join('') + '</ol><p style="margin-top:8px;font-weight:600">' + esc(p.kid.end) + '</p></div>' +
-      '<h3>Pour l’état des lieux</h3><ul>' + p.watch.map(t => '<li>' + esc(t) + '</li>').join('') + '</ul>';
+  const missing = () => Object.keys(needs()).filter(k => !S.have[k]);
+  function picked() {
+    return missing().filter(k => S.picks[k] != null && LISTINGS[k]).map(k => Object.assign({ key: k }, LISTINGS[k][S.picks[k]]));
+  }
+  const maxStep = () => !S.analyzed ? (S.objects.length ? 1 : 1) : !S.equipDone ? 3 : !(S.beforeAt && S.afterAt) ? 4 : 5;
+
+  /* ---------- « IA » simulée ---------- */
+  function kidMission() {
+    const POSS = { bateau: 'ton Optimist', velo: 'ton vélo', planche: 'ta planche à voile' };
+    const n = kidName(), young = S.age <= 11, items = S.objects.filter(o => o.kid && POSS[o.cat]).map(o => POSS[o.cat]);
+    const what = items.length ? items.join(' et ') : 'tes affaires', whatDe = items.length ? items.join(' et de ') : 'tes affaires';
+    const cap = t => t.charAt(0).toUpperCase() + t.slice(1);
+    return young ? {
+      intro: 'Capitaine ' + n + ' ! ' + cap(what) + (items.length === 1 ? ' déménage' : ' déménagent') + ' avec toi jusqu’à ' + MOVE.to + '. Ta mission :',
+      steps: ['Entoure ton mât de mousses, comme un trésor.', 'Range ton safran et ta dérive dans leurs housses.', 'Tourne les pédales de ton vélo vers l’intérieur.'],
+      end: 'Un adulte vérifiera. Bon vent, capitaine !'
+    } : {
+      intro: n + ', tu es responsable de ' + whatDe + ' pour ce déménagement de ' + MOVE.km.toLocaleString('fr-FR') + ' km. Ta check-list :',
+      steps: ['Mât, bôme et livarde dans les mousses.', 'Safran et dérive en housse, voile roulée avec ses lattes.', 'Pédales et guidon tournés vers l’intérieur.', 'Une photo de chaque objet pour l’état des lieux.'],
+      end: 'Tes affaires sont entre de bonnes mains : les tiennes.'
+    };
+  }
+  function planHTML() {
+    const n = needs();
+    const objs = S.objects.map(o => '<div class="plan"><h3>' + icon(o.cat, 20) + esc(o.name) + '</h3><ul>' + CATS[o.cat].plan.map(t => '<li>' + esc(t) + '</li>').join('') + '</ul></div>').join('');
+    const eq = Object.keys(n).map(k => '<div class="eq"><label><input type="checkbox" data-have="' + k + '"' + (S.have[k] ? ' checked' : '') + '> J’ai déjà</label><span style="flex:1">' + esc(EQ[k]) + '</span><strong>× ' + n[k] + '</strong></div>').join('');
+    const m = kidMission();
+    return '<div class="reveal">' + objs + '</div>' +
+      '<div class="kid reveal"><strong>Mission de ' + esc(kidName()) + '</strong><p style="margin-top:4px">' + esc(m.intro) + '</p><ol>' + m.steps.map(t => '<li>' + esc(t) + '</li>').join('') + '</ol><p style="margin-top:8px;font-weight:600">' + esc(m.end) + '</p></div>' +
+      '<div class="reveal" style="margin-top:16px"><h3 style="font-size:16px;margin-bottom:4px">L’équipement nécessaire</h3><p class="small muted" style="margin-bottom:6px">Coche ce que tu as déjà : AMARRE cherche le reste chez tes voisins.</p>' + eq + '</div>';
+  }
+  function resaleText(it) {
+    return '« À vendre : ' + EQ[it.key].toLowerCase() + '. Utilisation : un seul déménagement (' + MOVE.from + ' → ' + MOVE.to + '). État : bon, vérifié à l’arrivée. Prix : ' + eur(Math.round(it.price * RESALE)) + '. »';
   }
 
   /* ---------- rendu ---------- */
   function renderStepper() {
     const m = maxStep();
     $('#stepper').innerHTML = STEPS.map((l, i) => {
-      const n = i + 1, cls = n === S.step ? 'cur' : n < m || (n === m && n < S.step) ? 'done' : '';
+      const n = i + 1, cls = n === S.step ? 'cur' : n < m ? 'done' : '';
       return '<li class="' + cls + '"><button type="button" data-go="' + n + '"' + (n > m ? ' disabled' : '') + ' aria-label="Étape ' + n + ' : ' + l + '"' + (n === S.step ? ' aria-current="step"' : '') + '><span class="n">' + n + '</span><span class="lbl">' + l + '</span></button></li>';
     }).join('');
   }
-
   function render() {
     if (S.step > maxStep()) S.step = maxStep();
     renderStepper();
-    const views = [null, vRegattas, vFamilies, vProtect, vInspect, vRecap];
-    $('#main').innerHTML = views[S.step]();
-    if (S.step === 3 && S.plan && !animating) $('#ai-out').innerHTML = planHTML(generatePlan());
-    if (S.step === 3) syncPhoto('plan');
-    if (S.step === 4) syncPhoto(S.phase);
+    $('#main').innerHTML = [null, vObjects, vPrepare, vEquip, vInspect, vRecap][S.step]();
+    if (S.step === 2 && S.analyzed && !animating) $('#ai-out').innerHTML = planHTML();
     save();
   }
   function go(n) { S.step = n; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+  const reset = () => { S.analyzed = false; S.have = {}; S.picks = {}; S.equipDone = false; S.before = {}; S.after = {}; S.beforeAt = S.afterAt = null; S.phase = 'before'; S.resale = false; S.confirmed = false; };
 
-  function vRegattas() {
-    const list = REGATTAS.map(r => {
-      const pct = Math.round(r.found / r.boats * 100), missing = r.boats - r.found;
-      return '<div class="card reg"><div class="row between"><h3>' + esc(r.name) + ' · ' + esc(r.place) + '</h3>' +
-        (missing ? '<span class="badge b-orange">' + missing + ' bateau' + (missing > 1 ? 'x' : '') + ' sans place</span>' : '<span class="badge b-green">Tous les bateaux ont une place</span>') + '</div>' +
-        '<div class="meta"><span>' + esc(r.date) + '</span><span>' + r.km + ' km depuis Brest</span><span>' + r.boats + ' bateaux du club inscrits</span></div>' +
-        '<div class="row between small muted" style="margin-bottom:6px"><span>Places trouvées</span><span>' + r.found + ' / ' + r.boats + '</span></div>' +
-        '<div class="bar"><i style="width:' + pct + '%"></i></div>' +
-        '<div class="row" style="margin-top:14px"><button class="btn" type="button" data-reg="' + r.id + '">Trouver une place pour l’Optimist de ' + esc(childName()) + '</button></div></div>';
+  function vObjects() {
+    const list = S.objects.map(o => '<div class="card obj"><div class="ico">' + (photos[o.id] ? '<img src="' + photos[o.id] + '" alt="Photo : ' + esc(o.name) + '">' : icon(o.cat)) + '</div>' +
+      '<div><h3>' + esc(o.name) + '</h3><div class="small muted">' + esc(CATS[o.cat].label) + (o.kid ? ' · <span class="badge b-yellow">Trésor de ' + esc(kidName()) + '</span>' : '') + '</div></div>' +
+      '<div class="acts"><span class="btn ghost sm file-btn">Photo<input type="file" accept="image/*" capture="environment" data-photo="' + o.id + '" aria-label="Photo : ' + esc(o.name) + '"></span><button class="x" type="button" data-del="' + o.id + '" aria-label="Retirer ' + esc(o.name) + '">×</button></div></div>').join('');
+    const opts = Object.entries(CATS).map(([k, c]) => '<option value="' + k + '">' + c.label + '</option>').join('');
+    return '<div class="head"><h1>Le déménagement de la famille de ' + esc(kidName()) + '</h1><p>' + MOVE.from + ' → ' + MOVE.to + ' · ' + MOVE.date + ' · ≈ ' + MOVE.km.toLocaleString('fr-FR') + ' km, entre particuliers : un camion loué et des amis. Prends tes objets en photo : l’IA s’occupe du reste.</p></div>' +
+      '<div class="grid2"><div class="cards">' + (list || '<div class="card muted">Ajoute au moins un objet.</div>') +
+      '<div class="card"><span class="f">Ajouter un objet</span><div class="add"><select id="new-cat" aria-label="Type d’objet">' + opts + '</select><button class="btn sec" type="button" id="add">Ajouter</button></div></div></div>' +
+      '<div class="cards"><div class="card dark"><p class="small muted">Inventaire</p><div class="row" style="gap:22px;margin:6px 0 10px"><div><div class="kpi">' + S.objects.length + '</div><div class="small muted">objets</div></div><div><div class="kpi" style="color:#FFC145">' + Object.keys(needs()).length + '</div><div class="small muted">types d’équipement</div></div></div>' +
+      '<p class="small muted">Les photos restent sur ton appareil (démo). Dans l’appli, l’IA reconnaît l’objet sur la photo.</p></div>' +
+      '<button class="btn" type="button" id="analyze"' + (S.objects.length ? '' : ' disabled') + '>Lancer l’analyse de l’IA</button>' +
+      '<div class="note teal"><strong>Protection de l’enfant.</strong> ' + esc(kidName()) + ' n’a pas de compte : il voit ses missions sur l’appli de ses parents, et ne parle à aucun inconnu.</div></div></div>';
+  }
+
+  function vPrepare() {
+    return '<div class="head"><h1>L’IA prépare le déménagement</h1><p>Pour chaque objet, l’IA écrit le plan de protection et liste l’équipement nécessaire. Elle écrit aussi une mission pour ' + esc(kidName()) + ', adaptée à son âge.</p></div>' +
+      '<div class="grid2"><div class="card"><div class="row between" style="margin-bottom:12px"><span class="badge b-yellow">Écrit par l’IA (simulée pour la démo)</span></div><div id="ai-out"></div></div>' +
+      '<div class="cards"><div class="card"><div class="field"><label class="f" for="child">Prénom de l’enfant</label><input type="text" id="child" maxlength="20" value="' + esc(S.child) + '" autocomplete="off"></div>' +
+      '<div class="field"><label class="f" for="age">Âge : <span id="age-v">' + S.age + ' ans</span></label><input type="range" id="age" min="8" max="16" value="' + S.age + '"><div class="row between small muted"><span>8 ans : mission ludique</span><span>16 ans : check-list</span></div></div>' +
+      '<button class="btn ghost" type="button" id="rewrite">Réécrire la mission</button></div>' +
+      '<button class="btn" type="button" data-go="3" id="to-equip"' + (animating ? ' disabled' : '') + '>Trouver l’équipement chez les voisins</button></div></div>';
+  }
+
+  function vEquip() {
+    const miss = missing();
+    const groups = miss.map(k => {
+      const ls = LISTINGS[k] || [];
+      return '<div class="group"><h2>' + esc(EQ[k]) + (S.picks[k] != null ? ' <span class="badge b-green">Trouvé ✓</span>' : '') + '</h2><div class="cards">' + ls.map((l, i) => {
+        const sel = S.picks[k] === i;
+        return '<div class="card lst' + (sel ? ' sel' : '') + '"><div class="av" style="background:' + COLORS[(l.who.length + i) % COLORS.length] + '" aria-hidden="true">' + l.ini + '</div>' +
+          '<div><div class="row"><h3>' + esc(l.who) + '</h3><span class="badge b-teal">✓ Vérifié</span><span class="small muted">à ' + l.km + ' km</span></div>' +
+          '<div class="ai-txt">' + esc(l.txt) + '</div><div class="small muted" style="margin-top:4px">Annonce rédigée par l’IA à partir des photos du vendeur</div></div>' +
+          '<div class="side"><div class="price">' + (l.price ? eur(l.price) : 'Gratuit') + '</div><button class="btn sm' + (sel ? ' sec' : '') + '" type="button" data-pick="' + k + '" data-i="' + i + '" style="margin-top:8px">' + (sel ? 'Choisi ✓' : 'Je prends') + '</button></div></div>';
+      }).join('') + '</div></div>';
     }).join('');
-    const tot = REGATTAS.reduce((a, r) => ({ b: a.b + r.boats, f: a.f + r.found }), { b: 0, f: 0 });
-    return '<div class="head"><h1>Prochaines régates du club</h1><p>' + CLUB + ' (fictif). Choisis une régate : AMARRE trouve une famille du club qui emmène le bateau, et l’IA écrit le plan pour le protéger.</p></div>' +
-      '<div class="grid2"><div class="cards">' + list + '</div>' +
-      '<div class="cards"><div class="card dark"><p class="small muted">Côté club</p><h2 style="font-size:20px;margin:4px 0 14px">Le tableau de bord du club</h2>' +
-      '<div class="row" style="gap:22px"><div><div class="kpi">' + tot.b + '</div><div class="small muted">bateaux à emmener</div></div><div><div class="kpi" style="color:#FFC145">' + tot.f + '</div><div class="small muted">places trouvées</div></div><div><div class="kpi">' + (tot.b - tot.f) + '</div><div class="small muted">à trouver</div></div></div>' +
-      '<p class="small muted" style="margin-top:14px">AMARRE relance les familles qui ont de la place. Abonnement club : 290 € par an.</p></div>' +
-      '<div class="note teal"><strong>Protection de l’enfant.</strong> ' + esc(childName()) + ' n’a pas de compte. Seuls ses parents, vérifiés par le club, échangent avec les autres familles.</div></div></div>';
-  }
-
-  function vFamilies() {
-    const r = reg(), list = FAMILIES[r.id].map(f => {
-      const sel = f.id === S.family;
-      return '<div class="card fam' + (sel ? ' sel' : '') + '"><div class="avatar" style="background:' + f.color + '" aria-hidden="true">' + f.ini + '</div>' +
-        '<div><div class="row"><h3>' + esc(f.name) + '</h3><span class="badge b-teal">✓ Vérifiée par le club</span></div>' +
-        '<div class="meta">' + esc(f.label) + ' · ' + f.free + ' place' + (f.free > 1 ? 's' : '') + ' libre' + (f.free > 1 ? 's' : '') + '</div>' +
-        '<div class="meta">Départ : ' + esc(f.depart) + '</div>' +
-        '<div class="small" style="margin-top:4px">' + (f.trips ? '<span class="badge b-green">' + f.trips + ' trajets AMARRE, aucune casse</span>' : '<span class="badge b-yellow">Nouvelle sur AMARRE</span>') + '</div></div>' +
-        '<div class="act"><button class="btn' + (sel ? ' sec' : '') + '" type="button" data-fam="' + f.id + '">' + (sel ? 'Place choisie ✓' : 'Choisir cette place') + '</button></div></div>';
-    }).join('');
-    return '<div class="head"><h1>' + esc(r.name) + ' · ' + esc(r.place) + '</h1><p>' + esc(r.date) + ' · ' + r.km + ' km. Ces familles du club ont de la place pour l’Optimist de ' + esc(childName()) + '.</p></div>' +
-      '<div class="grid2"><div class="cards">' + list + '</div><div class="cards">' +
-      '<div class="card"><h3 style="font-size:17px;margin-bottom:10px">Combien ça coûte ?</h3><div class="lines">' +
-      '<div class="line"><span>Participation aux frais de route<br><span class="small muted">' + r.km + ' km × 0,05 €, versée à la famille qui transporte</span></span><strong>' + share(r) + ' €</strong></div>' +
-      '<div class="line"><span>Frais de service AMARRE<br><span class="small muted">plan de protection IA, état des lieux, assurance casse</span></span><strong>' + FEE + ' €</strong></div></div>' +
-      '<p class="small muted" style="margin-top:10px">Le transport reste un partage de frais entre particuliers, comme le prévoit la loi pour le cotransportage.</p></div>' +
-      '<div class="note teal"><strong>Aucun contact entre un adulte et un enfant.</strong> La messagerie est réservée aux parents. ' + esc(childName()) + ' voyage avec sa propre famille ; seul son bateau part avec une autre.</div></div></div>';
-  }
-
-  function vProtect() {
-    const f = fam(), r = reg();
-    return '<div class="head"><h1>L’IA protège le bateau</h1><p>Le parent prend l’Optimist en photo, et l’IA rédige le plan de chargement adapté au trajet (' + esc(lowFirst(f.label)) + ', ' + r.km + ' km), plus une mission pour l’enfant, adaptée à son âge.</p></div>' +
-      '<div class="grid2"><div class="card">' +
-      '<div class="field"><label class="f" for="child">Prénom de l’enfant</label><input type="text" id="child" maxlength="20" value="' + esc(S.child) + '" autocomplete="off"></div>' +
-      '<div class="field"><label class="f" for="age">Âge : <span id="age-v">' + S.age + ' ans</span></label><input type="range" id="age" min="8" max="16" value="' + S.age + '"><div class="row between small muted"><span>8 ans : mission ludique</span><span>16 ans : check-list technique</span></div></div>' +
-      '<div class="field"><label class="check"><input type="checkbox" id="wind"' + (S.wind ? ' checked' : '') + '> Vent fort annoncé sur la route</label></div>' +
-      '<div class="field"><span class="f">Photo du bateau (facultatif)</span><div class="photo"><img id="ph-plan" alt="Photo du bateau" hidden><span class="btn ghost file-btn">Prendre une photo<input type="file" accept="image/*" capture="environment" data-photo="plan" aria-label="Prendre une photo du bateau"></span></div><p class="small muted" style="margin-top:6px">La photo reste sur ton appareil (démo).</p></div>' +
-      '<button class="btn" type="button" id="gen">' + (S.plan ? 'Réécrire le plan' : 'Générer le plan de protection') + '</button></div>' +
-      '<div class="card ai"><div class="row between" style="margin-bottom:12px"><span class="badge b-yellow">Écrit par l’IA (simulée pour la démo)</span></div><div id="ai-out">' +
-      (S.plan ? '' : '<p class="muted">Le plan apparaîtra ici. Change l’âge ou la météo, puis réécris-le : l’IA s’adapte.</p>') + '</div>' +
-      '<div class="row" style="margin-top:16px"><button class="btn" type="button" data-go="4"' + (S.plan ? '' : ' disabled') + ' id="to-insp">Passer à l’état des lieux</button></div></div></div>';
-  }
-
-  function boatSVG(st) {
-    const fill = id => ST_FILL[st[id] || 'none'];
-    const z = (id, shape) => '<g role="button" tabindex="0" data-zone="' + id + '" aria-label="' + ZONES.find(q => q.id === id).label + ' : ' + (st[id] ? ST_LABEL[st[id]] : 'non vérifié') + '">' + shape + '</g>';
-    const hull = 'M70 20 L130 20 Q164 60 164 140 L160 250 Q158 272 138 274 L62 274 Q42 272 40 250 L36 140 Q36 60 70 20 Z';
-    return '<svg class="boat" viewBox="0 0 200 330" aria-label="Optimist vu de dessus"><defs><clipPath id="hc"><path d="' + hull + '"/></clipPath></defs>' +
-      z('avant', '<rect x="0" y="0" width="200" height="140" fill="' + fill('avant') + '" clip-path="url(#hc)"/>') +
-      z('arriere', '<rect x="0" y="140" width="200" height="140" fill="' + fill('arriere') + '" clip-path="url(#hc)"/>') +
-      '<path d="' + hull + '" fill="none" stroke="#0A2540" stroke-width="3"/>' +
-      '<line x1="38" y1="140" x2="162" y2="140" stroke="#0A2540" stroke-width="1" stroke-dasharray="4 4" opacity=".4"/>' +
-      z('derive', '<rect x="91" y="150" width="18" height="46" rx="4" fill="' + fill('derive') + '" stroke="#0A2540" stroke-width="2"/>') +
-      z('mat', '<circle cx="100" cy="78" r="11" fill="' + fill('mat') + '" stroke="#0A2540" stroke-width="2"/>') +
-      z('safran', '<rect x="93" y="272" width="14" height="46" rx="4" fill="' + fill('safran') + '" stroke="#0A2540" stroke-width="2"/>') +
-      '<text x="100" y="58" text-anchor="middle" font-size="11" fill="#587085">avant</text></svg>';
+    const p = picked(), tot = p.reduce((a, x) => a + x.price, 0);
+    return '<div class="head"><h1>S’équiper entre voisins</h1><p>Tout ce qui manque existe déjà chez un particulier près de chez toi. Achète d’occasion, et revends après le déménagement.</p></div>' +
+      '<div class="grid2"><div>' + (groups || '<div class="card">Tu as déjà tout l’équipement nécessaire.</div>') + '</div>' +
+      '<div class="cards" style="position:sticky;top:12px"><div class="card"><h3 style="font-size:17px;margin-bottom:10px">Ton panier</h3><div class="lines">' +
+      (p.length ? p.map(x => '<div class="line"><span>' + esc(EQ[x.key]) + '<br><span class="small muted">' + esc(x.who) + ', à ' + x.km + ' km</span></span><strong>' + (x.price ? eur(x.price) : 'Gratuit') + '</strong></div>').join('') : '<p class="muted small">Choisis une annonce pour chaque équipement.</p>') +
+      '<div class="line"><span class="total">Total</span><span class="total">' + eur(tot) + '</span></div></div>' +
+      '<p class="small muted" style="margin-top:8px">Dont 10 % de commission AMARRE, payée par le vendeur. Le paiement est versé au vendeur une fois l’équipement remis.</p></div>' +
+      '<button class="btn" type="button" id="equip-done">' + (p.length < miss.length ? 'Continuer (il me manque des choses)' : 'Passer à l’état des lieux') + '</button></div></div>';
   }
 
   function vInspect() {
-    const f = fam(), r = reg(), ph = S.phase, st = S[ph], done = ZONES.every(q => st[q.id]);
-    const locked = ph === 'before' ? !!S.beforeAt : !!S.afterAt;
-    const zones = ZONES.map(q => '<button type="button" class="zone ' + (st[q.id] || '') + '" data-zone="' + q.id + '"' + (locked ? ' disabled' : '') + '><span>' + q.label + '</span><span class="st">' + (st[q.id] ? ST_LABEL[st[q.id]] : 'À vérifier') + '</span></button>').join('');
+    const ph = S.phase, st = S[ph], done = S.objects.every(o => st[o.id]), locked = ph === 'before' ? !!S.beforeAt : !!S.afterAt;
+    const rows = S.objects.map(o => '<div class="ins"><div class="row">' + icon(o.cat, 22) + '<strong>' + esc(o.name) + '</strong></div><div class="seg" role="group" aria-label="État : ' + esc(o.name) + '">' +
+      ['ok', 'rayure', 'choc'].map(s => '<button type="button" class="' + s + (st[o.id] === s ? ' on' : '') + '" data-st="' + s + '" data-obj="' + o.id + '" aria-pressed="' + (st[o.id] === s) + '"' + (locked ? ' disabled' : '') + '>' + ST[s] + '</button>').join('') + '</div></div>').join('');
     let status = '';
-    if (ph === 'before' && S.beforeAt) status = '<div class="note green reveal"><strong>État des lieux au départ enregistré à ' + hm(S.beforeAt) + '.</strong> Le bateau est en route avec la ' + esc(famLow(f)) + '. À l’arrivée à ' + esc(r.place) + ', refais l’état des lieux.<div class="row" style="margin-top:12px"><button class="btn" type="button" data-phase="after">Le bateau est arrivé : état des lieux à l’arrivée</button></div></div>';
+    if (ph === 'before' && S.beforeAt) status = '<div class="note green reveal"><strong>État des lieux au départ enregistré à ' + hm(S.beforeAt) + '.</strong> Bonne route vers ' + MOVE.to + ' ! À l’arrivée, refais l’état des lieux.<div class="row" style="margin-top:12px"><button class="btn" type="button" data-phase="after">Nous sommes arrivés : état des lieux à l’arrivée</button></div></div>';
     if (ph === 'after' && S.afterAt) status = compareHTML();
-    return '<div class="head"><h1>État des lieux</h1><p>Avant et après le trajet, chaque partie du bateau est vérifiée et photographiée. En cas de casse, la preuve est prête.</p></div>' +
-      '<div class="tabs" role="tablist"><button type="button" class="tab' + (ph === 'before' ? ' on' : '') + '" data-phase="before" role="tab" aria-selected="' + (ph === 'before') + '">1. Au départ' + (S.beforeAt ? ' ✓' : '') + '</button>' +
-      '<button type="button" class="tab' + (ph === 'after' ? ' on' : '') + '" data-phase="after" role="tab" aria-selected="' + (ph === 'after') + '"' + (S.beforeAt ? '' : ' disabled') + '>2. À l’arrivée' + (S.afterAt ? ' ✓' : '') + '</button></div>' +
-      '<div class="card"><div class="insp"><div>' + boatSVG(st) + '</div><div>' +
-      '<p class="small muted" style="margin-bottom:10px">Touche une partie du bateau pour changer son état : OK, rayure ou choc.</p>' +
-      '<div class="zones">' + zones + '</div>' +
-      '<div class="legend"><span><i style="background:' + ST_FILL.none + '"></i>À vérifier</span><span><i style="background:' + ST_FILL.ok + '"></i>OK</span><span><i style="background:' + ST_FILL.rayure + '"></i>Rayure</span><span><i style="background:' + ST_FILL.choc + '"></i>Choc</span></div>' +
-      '<div class="photo" style="margin:6px 0 14px"><img id="ph-' + ph + '" alt="Photo de l’état des lieux" hidden><span class="btn ghost file-btn">Ajouter une photo<input type="file" accept="image/*" capture="environment" data-photo="' + ph + '" aria-label="Ajouter une photo pour l’état des lieux"' + (locked ? ' disabled' : '') + '></span></div>' +
-      (locked ? '' : '<div class="row"><button class="btn sec" type="button" id="all-ok">Tout est OK</button>' + (ph === 'after' ? '<button class="btn ghost" type="button" id="incident">Simuler un incident</button>' : '') +
-        '<button class="btn" type="button" id="validate"' + (done ? '' : ' disabled') + '>Valider l’état des lieux ' + (ph === 'before' ? 'au départ' : 'à l’arrivée') + '</button></div>') +
-      '</div></div></div><div style="margin-top:14px" id="insp-status">' + status + '</div>';
+    return '<div class="head"><h1>État des lieux</h1><p>Avant et après le trajet, chaque objet est vérifié et photographié. En cas de casse, la preuve est prête, et l’assurance prend le relais.</p></div>' +
+      '<div class="tabs"><button type="button" class="tab' + (ph === 'before' ? ' on' : '') + '" data-phase="before">1. Au départ' + (S.beforeAt ? ' ✓' : '') + '</button><button type="button" class="tab' + (ph === 'after' ? ' on' : '') + '" data-phase="after"' + (S.beforeAt ? '' : ' disabled') + '>2. À l’arrivée' + (S.afterAt ? ' ✓' : '') + '</button></div>' +
+      '<div class="card">' + rows +
+      (locked ? '' : '<div class="row" style="margin-top:14px"><button class="btn sec" type="button" id="all-ok">Tout est OK</button>' + (ph === 'after' ? '<button class="btn ghost" type="button" id="incident">Simuler un incident</button>' : '') + '<button class="btn" type="button" id="validate"' + (done ? '' : ' disabled') + '>Valider l’état des lieux ' + (ph === 'before' ? 'au départ' : 'à l’arrivée') + '</button></div>') +
+      '</div><div style="margin-top:14px" id="insp-status">' + status + '</div>';
   }
-
-  function damages() {
-    return ZONES.filter(q => ST_RANK[S.after[q.id]] > ST_RANK[S.before[q.id]]).map(q => ({ label: q.label, from: ST_LABEL[S.before[q.id]], to: ST_LABEL[S.after[q.id]] }));
-  }
+  const damages = () => S.objects.filter(o => RANK[S.after[o.id]] > RANK[S.before[o.id]]).map(o => o.name + ' : ' + ST[S.before[o.id]] + ' au départ, ' + ST[S.after[o.id]] + ' à l’arrivée');
   function compareHTML() {
-    const d = damages(), f = fam(), r = reg();
-    if (!d.length) return '<div class="note green reveal"><strong>Aucun nouveau dommage.</strong> L’Optimist de ' + esc(childName()) + ' est arrivé à ' + esc(r.place) + ' en un seul morceau (départ ' + hm(S.beforeAt) + ', arrivée ' + hm(S.afterAt) + ').<div class="row" style="margin-top:12px"><button class="btn" type="button" data-go="5">Voir le récapitulatif</button></div></div>';
-    const list = d.map(x => x.label + ' : ' + x.from + ' au départ, ' + x.to + ' à l’arrivée').join(' ; ');
-    return '<div class="note red reveal"><strong>Nouveau dommage détecté :</strong> ' + esc(list) + '.' +
-      '<div class="card" style="margin-top:12px"><span class="badge b-yellow">Déclaration rédigée par l’IA (simulée)</span><p style="margin-top:8px">Déclaration de casse. Trajet Brest → ' + esc(r.place) + ' (' + r.km + ' km), bateau transporté par la ' + esc(famLow(f)) + '. État des lieux au départ à ' + hm(S.beforeAt) + ', à l’arrivée à ' + hm(S.afterAt) + '. Dommage constaté : ' + esc(list) + '. Photos jointes. Montant à évaluer par l’assureur partenaire.</p>' +
-      '<p class="small muted" style="margin-top:8px">Envoyée à l’assureur partenaire (démo). Les deux familles reçoivent une copie : pas de dispute, la preuve est là.</p></div>' +
-      '<div class="row" style="margin-top:12px"><button class="btn" type="button" data-go="5">Voir le récapitulatif</button></div></div>';
+    const d = damages();
+    if (!d.length) return '<div class="note green reveal"><strong>Aucun nouveau dommage.</strong> Tout est arrivé à ' + MOVE.to + ' en un seul morceau (départ à ' + hm(S.beforeAt) + ', arrivée ' + arr() + ').<div class="row" style="margin-top:12px"><button class="btn" type="button" data-go="5">Voir le récapitulatif</button></div></div>';
+    return '<div class="note red reveal"><strong>Nouveau dommage détecté :</strong> ' + esc(d.join(' ; ')) + '.<div class="card" style="margin-top:12px"><span class="badge b-yellow">Déclaration rédigée par l’IA (simulée)</span><p style="margin-top:8px">Déclaration de casse. Déménagement ' + MOVE.from + ' → ' + MOVE.to + ' du ' + MOVE.date + '. État des lieux au départ à ' + hm(S.beforeAt) + ', à l’arrivée ' + arr() + '. Dommage constaté : ' + esc(d.join(' ; ')) + '. Photos jointes. Montant à évaluer par l’assureur partenaire.</p><p class="small muted" style="margin-top:8px">Envoyée à l’assureur partenaire (démo). Pas de dispute : la preuve est là.</p></div><div class="row" style="margin-top:12px"><button class="btn" type="button" data-go="5">Voir le récapitulatif</button></div></div>';
   }
 
   function vRecap() {
-    const r = reg(), f = fam(), d = damages(), sh = share(r);
-    return '<div class="head"><h1>Récapitulatif du trajet</h1><p>Tout ce qui protège l’Optimist de ' + esc(childName()) + ', au même endroit.</p></div>' +
-      '<div class="grid2"><div class="card"><div class="lines">' +
-      '<div class="line"><span>Régate</span><strong>' + esc(r.name) + ' · ' + esc(r.place) + '</strong></div>' +
-      '<div class="line"><span>Famille qui transporte</span><strong>' + esc(f.name) + ' <span class="ok-ico">✓</span></strong></div>' +
-      '<div class="line"><span>Plan de protection IA</span><strong class="ok-ico">Rédigé ✓</strong></div>' +
-      '<div class="line"><span>État des lieux</span><strong>Départ ' + hm(S.beforeAt) + ' · arrivée ' + hm(S.afterAt) + '</strong></div>' +
-      '<div class="line"><span>Résultat</span><strong style="color:' + (d.length ? 'var(--red)' : 'var(--green)') + '">' + (d.length ? 'Dommage déclaré à l’assureur' : 'Aucun dommage') + '</strong></div></div></div>' +
+    const p = picked(), eqTot = p.reduce((a, x) => a + x.price, 0), sell = p.filter(x => x.price > 0), back = sell.reduce((a, x) => a + Math.round(x.price * RESALE), 0), d = damages();
+    return '<div class="head"><h1>Récapitulatif et revente</h1><p>Le déménagement est fait. L’équipement, lui, peut resservir : l’IA écrit les annonces pour le revendre à d’autres particuliers.</p></div>' +
+      '<div class="grid2"><div class="cards"><div class="card"><h3 style="font-size:17px;margin-bottom:10px">Revendre l’équipement</h3>' +
+      (sell.length ? (S.resale ? sell.map(x => '<div class="line reveal" style="display:block"><div class="row between"><strong>' + esc(EQ[x.key]) + '</strong><span class="badge b-green">' + eur(Math.round(x.price * RESALE)) + '</span></div><div class="ai-txt">' + esc(resaleText(x)) + '</div></div>').join('') :
+        '<p class="muted small" style="margin-bottom:12px">' + sell.length + ' objet' + (sell.length > 1 ? 's' : '') + ' à revendre : environ ' + eur(back) + ' récupérés.</p><button class="btn" type="button" id="resale">Écrire les annonces de revente</button>') : '<p class="muted small">Rien à revendre : tout l’équipement était gratuit ou déjà à toi.</p>') +
+      '</div><div class="note teal"><strong>L’équipement tourne.</strong> La remorque de Marc a servi à ' + esc(kidName()) + ' ; demain, elle servira à une autre famille.</div></div>' +
       '<div class="cards"><div class="card"><div class="lines">' +
-      '<div class="line"><span>Participation aux frais<br><span class="small muted">versée à la ' + esc(famLow(f)) + '</span></span><strong>' + sh + ' €</strong></div>' +
-      '<div class="line"><span>Frais de service AMARRE<br><span class="small muted">IA, état des lieux, assurance casse</span></span><strong>' + FEE + ' €</strong></div>' +
-      '<div class="line"><span class="total">Total</span><span class="total">' + (sh + FEE) + ' €</span></div></div>' +
-      (S.confirmed ? '<div class="note green reveal" style="margin-top:14px"><strong>Réservation confirmée (démo).</strong> Aucun paiement réel n’a été effectué.</div>' : '<button class="btn" type="button" id="confirm" style="margin-top:14px;width:100%">Confirmer la réservation (démo, sans paiement)</button>') +
-      '</div><div class="note teal"><strong>Protection de l’enfant.</strong> ' + esc(childName()) + ' n’a pas de compte et ne parle à aucun adulte via AMARRE. Ses parents gardent la main sur tout.</div>' +
-      '<button class="btn ghost" type="button" id="reset">Recommencer la démo</button></div></div>';
+      '<div class="line"><span>Équipement d’occasion<br><span class="small muted">' + p.length + ' achat' + (p.length > 1 ? 's' : '') + ' entre particuliers</span></span><strong>' + eur(eqTot) + '</strong></div>' +
+      '<div class="line"><span>Pack Protection AMARRE<br><span class="small muted">plans IA, états des lieux, assurance casse</span></span><strong>' + eur(PACK) + '</strong></div>' +
+      '<div class="line"><span class="total">Total</span><span class="total">' + eur(eqTot + PACK) + '</span></div>' +
+      (sell.length ? '<div class="line"><span>Après revente<br><span class="small muted">coût réel du déménagement protégé</span></span><strong style="color:var(--green)">' + eur(eqTot + PACK - back) + '</strong></div>' : '') +
+      '<div class="line"><span>État des lieux</span><strong style="color:' + (d.length ? 'var(--red)' : 'var(--green)') + '">' + (d.length ? 'Dommage déclaré à l’assureur' : 'Aucun dommage') + '</strong></div></div>' +
+      (S.confirmed ? '<div class="note green reveal" style="margin-top:14px"><strong>Confirmé (démo).</strong> Aucun paiement réel n’a été effectué.</div>' : '<button class="btn" type="button" id="confirm" style="margin-top:14px;width:100%">Confirmer (démo, sans paiement)</button>') +
+      '</div><button class="btn ghost" type="button" id="restart">Recommencer la démo</button></div></div>';
   }
 
-  /* ---------- photos (restent en mémoire, jamais envoyées) ---------- */
-  function syncPhoto(k) { const img = $('#ph-' + k); if (img && photos[k]) { img.src = photos[k]; img.hidden = false; } }
+  /* ---------- animation de l'IA ---------- */
+  function runAI() {
+    animating = true; S.analyzed = true; S.step = 2; render();
+    const out = $('#ai-out');
+    out.innerHTML = '<div class="typing"><span class="dots"><span></span><span></span><span></span></span> L’IA analyse ' + S.objects.length + ' objets et prépare les plans…</div>';
+    setTimeout(() => {
+      const tmp = document.createElement('div'); tmp.innerHTML = planHTML();
+      const parts = Array.from(tmp.children); out.innerHTML = '';
+      let i = 0;
+      (function next() {
+        if (i < parts.length) { out.appendChild(parts[i++]); setTimeout(next, 300); return; }
+        animating = false; const b = $('#to-equip'); if (b) b.disabled = false; renderStepper(); save();
+      })();
+    }, 1200);
+  }
 
   /* ---------- interactions ---------- */
-  function cycleZone(id) {
-    const st = S[S.phase];
-    if ((S.phase === 'before' && S.beforeAt) || (S.phase === 'after' && S.afterAt)) return;
-    st[id] = ST_NEXT[st[id]];
-    render();
-    const el = document.querySelector('.zone[data-zone="' + id + '"]'); if (el) el.focus();
-  }
-  function runGeneration() {
-    animating = true;
-    const out = $('#ai-out'), btn = $('#gen'), next = $('#to-insp');
-    btn.disabled = true; next.disabled = true;
-    out.innerHTML = '<div class="typing"><span class="dots"><span></span><span></span><span></span></span> L’IA analyse le trajet et rédige le plan…</div>';
-    const p = generatePlan();
-    setTimeout(() => {
-      out.innerHTML = '';
-      const tmp = document.createElement('div'); tmp.innerHTML = planHTML(p);
-      const parts = Array.from(tmp.children);
-      let i = 0;
-      (function step() {
-        if (i < parts.length) { parts[i].classList.add('reveal'); out.appendChild(parts[i]); i++; setTimeout(step, 260); return; }
-        animating = false; S.plan = true; save(); btn.disabled = false; btn.textContent = 'Réécrire le plan'; next.disabled = false; renderStepper();
-      })();
-    }, 1100);
-  }
-
   document.addEventListener('click', e => {
-    const t = e.target.closest('button,[data-zone]');
+    const t = e.target.closest('button');
     if (!t || t.disabled) return;
     if (t.dataset.go) return go(+t.dataset.go);
-    if (t.dataset.reg) { if (S.regatta !== t.dataset.reg) { S.family = null; S.plan = false; S.before = {}; S.after = {}; S.beforeAt = S.afterAt = null; S.phase = 'before'; S.confirmed = false; } S.regatta = t.dataset.reg; return go(2); }
-    if (t.dataset.fam) { if (S.family !== t.dataset.fam) { S.plan = false; S.before = {}; S.after = {}; S.beforeAt = S.afterAt = null; S.phase = 'before'; S.confirmed = false; } S.family = t.dataset.fam; return go(3); }
-    if (t.dataset.zone) return cycleZone(t.dataset.zone);
+    if (t.dataset.del) { S.objects = S.objects.filter(o => o.id !== t.dataset.del); reset(); return render(); }
+    if (t.dataset.pick) { const k = t.dataset.pick, i = +t.dataset.i; S.picks[k] = S.picks[k] === i ? null : i; return render(); }
+    if (t.dataset.st) { if (!(S.phase === 'before' ? S.beforeAt : S.afterAt)) { S[S.phase][t.dataset.obj] = t.dataset.st; render(); } return; }
     if (t.dataset.phase) { S.phase = t.dataset.phase; return render(); }
     switch (t.id) {
-      case 'gen': return runGeneration();
-      case 'all-ok': ZONES.forEach(q => { S[S.phase][q.id] = 'ok'; }); return render();
-      case 'incident': ZONES.forEach(q => { if (!S.after[q.id]) S.after[q.id] = S.before[q.id] || 'ok'; }); S.after.safran = 'choc'; return render();
+      case 'add': { const cat = $('#new-cat').value; S.objects.push({ id: 'o' + (S.seq++), name: CATS[cat].label.replace(/ \(.*\)/, ''), cat }); reset(); return render(); }
+      case 'analyze': return runAI();
+      case 'rewrite': if (!animating) { $('#ai-out').innerHTML = planHTML(); } return;
+      case 'equip-done': S.equipDone = true; return go(4);
+      case 'all-ok': S.objects.forEach(o => { S[S.phase][o.id] = 'ok'; }); return render();
+      case 'incident': { S.objects.forEach(o => { if (!S.after[o.id]) S.after[o.id] = S.before[o.id] || 'ok'; }); const tv = S.objects.find(o => o.cat === 'tv') || S.objects[0]; S.after[tv.id] = 'choc'; return render(); }
       case 'validate':
         if (S.phase === 'before') { S.beforeAt = Date.now(); S.after = {}; S.afterAt = null; }
-        else { S.afterAt = Math.max(Date.now(), S.beforeAt + Math.round(reg().km / 80 * 3600000)); /* heure d'arrivée simulée pour la démo */ }
+        else S.afterAt = Math.max(Date.now(), S.beforeAt + 26 * 3600000); /* trajet en deux jours, arrivée simulée pour la démo */
         S.confirmed = false; return render();
+      case 'resale': S.resale = true; return render();
       case 'confirm': S.confirmed = true; return render();
-      case 'reset': S = fresh(); Object.keys(photos).forEach(k => { photos[k] = null; }); return go(1);
+      case 'restart': S = fresh(); Object.keys(photos).forEach(k => delete photos[k]); return go(1);
     }
   });
-  document.addEventListener('keydown', e => {
-    const z = e.target.closest && e.target.closest('g[data-zone]');
-    if (z && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); cycleZone(z.dataset.zone); }
+  document.addEventListener('change', e => {
+    const t = e.target;
+    if (t.dataset && t.dataset.have) { S.have[t.dataset.have] = t.checked; Object.keys(S.picks).forEach(k => { if (S.have[k]) delete S.picks[k]; }); save(); renderStepper(); return; }
+    if (t.dataset && t.dataset.photo && t.files && t.files[0]) {
+      const id = t.dataset.photo, rd = new FileReader();
+      rd.onload = () => { photos[id] = rd.result; render(); };
+      rd.readAsDataURL(t.files[0]);
+    }
   });
   document.addEventListener('input', e => {
     const t = e.target;
     if (t.id === 'child') { S.child = t.value; save(); }
     if (t.id === 'age') { S.age = +t.value; $('#age-v').textContent = S.age + ' ans'; save(); }
   });
-  document.addEventListener('change', e => {
-    const t = e.target;
-    if (t.id === 'wind') { S.wind = t.checked; save(); }
-    if (t.dataset && t.dataset.photo && t.files && t.files[0]) {
-      const k = t.dataset.photo, rd = new FileReader();
-      rd.onload = () => { photos[k] = rd.result; syncPhoto(k); };
-      rd.readAsDataURL(t.files[0]);
-    }
-  });
-
   render();
 })();
 </script>
